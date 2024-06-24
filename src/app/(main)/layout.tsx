@@ -1,9 +1,5 @@
 import type { Metadata } from 'next';
-import './globals.css';
 import ThemeProvider from '@/components/ThemeProvider';
-import Sidebar from '@/components/Sidebar';
-import { useState } from 'react';
-import Header from '@/components/Header';
 import Wrapper from '@/components/Wrapper';
 
 export const metadata: Metadata = {
@@ -11,14 +7,23 @@ export const metadata: Metadata = {
   description: 'Egg Shop Dashboard Page',
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Wrapper children={children} />
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
