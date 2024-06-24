@@ -14,7 +14,7 @@ const Wrapper = ({
       <Header setIsShow={setIsShow} />
       <div className="grow flex overflow-auto relative">
         <Sidebar isShow={isShow} />
-        <main className="bg-blue-300 grow overflow-auto">{children}</main>
+        <main className="grow overflow-auto">{children}</main>
       </div>
     </div>
   );

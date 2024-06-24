@@ -8,7 +8,7 @@ type HeaderProps = {
 
 const Header = ({ setIsShow }: HeaderProps) => {
   return (
-    <div className="flex p-4 justify-between items-center dark:bg-slate-950">
+    <div className="flex p-4 justify-between items-center dark:bg-slate-950 border-b-[1.75px] border-slate-300">
       {/* Left Header */}
       <div className="flex items-center gap-4">
         <Menu
