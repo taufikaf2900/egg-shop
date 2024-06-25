@@ -8,20 +8,18 @@ export const metadata: Metadata = {
 
 export default function Dashboard() {
   return (
-    <div>
+    <>
       {/* Dashboard Top Section */}
-      <div>
-        <Card className="rounded-none">
-          <CardHeader>
-            <CardTitle>Dashboard</CardTitle>
-          </CardHeader>
-        </Card>
-      </div>
+      <Card className="rounded-none sticky top-0 z-10">
+        <CardHeader>
+          <CardTitle>Dashboard</CardTitle>
+        </CardHeader>
+      </Card>
 
       {/* Dashboard main Section */}
       <div className="px-7 py-4">
         <h3>Dahsboard</h3>
       </div>
-    </div>
+    </>
   );
 }
