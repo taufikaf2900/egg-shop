@@ -15,8 +15,10 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import EditProfile from '@/components/EditProfile';
+import { useRouter } from 'next/navigation';
 
 const SidebarNavigation = () => {
+  const router = useRouter();
   return (
     <Command className="p-4 rounded-none">
       <CommandList>
@@ -59,10 +61,15 @@ const SidebarNavigation = () => {
         </CommandGroup>
         <CommandSeparator />
         <CommandGroup heading="Lain-lain">
-          <CommandItem className="flex items-center gap-2 cursor-pointer">
-            <LogOut size={18} />
-            Sign Out
-          </CommandItem>
+          <div
+            className="flex items-center gap-2 cursor-pointer w-full"
+            onClick={() => router.replace('/login')}
+          >
+            <CommandItem className="flex items-center gap-2 cursor-pointer w-full">
+              <LogOut size={18} />
+              Sign Out
+            </CommandItem>
+          </div>
         </CommandGroup>
       </CommandList>
     </Command>

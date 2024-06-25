@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Card, CardHeader, CardTitle } from '@/components/ui/card';
 
 export const metadata: Metadata = {
   title: 'Egg Shop - Users',
@@ -7,9 +8,19 @@ export const metadata: Metadata = {
 
 const Page = () => {
   return (
-    <div className="p-4">
-      <h3>Users</h3>
-    </div>
+    <>
+      {/* Bagian Atas Halaman Users */}
+      <Card className="rounded-none sticky top-0 z-0">
+        <CardHeader>
+          <CardTitle>Users</CardTitle>
+        </CardHeader>
+      </Card>
+
+      {/* Bagian Utama Halaman Users */}
+      <div className="px-7 py-4">
+        <h3>Users</h3>
+      </div>
+    </>
   );
 };
 
