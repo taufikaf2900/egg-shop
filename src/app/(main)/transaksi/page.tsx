@@ -6,7 +6,11 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return <h3>Transaksi</h3>;
+  return (
+    <div className="p-4">
+      <h3>Transaksi</h3>
+    </div>
+  );
 };
 
 export default Page;

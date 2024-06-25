@@ -1,7 +1,17 @@
+import EditProfile from '@/components/EditProfile';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Egg Shop - Dashboard',
+  description: 'Halaman Dashboard',
+};
+
 export default function Dashboard() {
   return (
     <div className="p-4">
-      <h2 className="">Hello World</h2>
+      <EditProfile>
+        <h3>Dahsboard</h3>
+      </EditProfile>
     </div>
   );
 }
